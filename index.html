@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#11643e">
+<title>ISTEC NDOGBONG — Bibliothèque de sujets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#11643e;--orange:#ed9e18;--red:#b32043;--white:#fff;--bg:#f5f6f0;--ink:#173c2b;--muted:#627166;--line:#dce3da}
+*{box-sizing:border-box}body{margin:0;font-family:"Source Sans 3",sans-serif;background:var(--bg);color:var(--ink)}h1,h2,h3,.brand{font-family:Manrope,sans-serif}button,input,select,textarea{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}a{color:inherit;text-decoration:none}button{transition:transform .2s,background .2s}button:hover{transform:translateY(-2px)}button:active{transform:none}:focus-visible{outline:3px solid var(--orange);outline-offset:3px}[hidden]{display:none!important}.wrap{width:min(1240px,calc(100% - 40px));margin:auto}.top{background:var(--green);color:white;font-size:12px;letter-spacing:1px;padding:9px 0}.top .wrap{display:flex;justify-content:space-between}header{background:var(--white);border-bottom:1px solid var(--line)}.head{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0}.brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:21px}.brand small{display:block;font:600 10px "Source Sans 3";letter-spacing:2.2px;margin-top:4px}.logo{width:76px;height:70px;object-fit:contain}.fallback{width:62px;height:62px;background:var(--green);color:white;display:grid;place-items:center;border-radius:2px 18px 2px 2px;font-size:24px;border-bottom:5px solid var(--orange)}.header-actions{display:flex;gap:12px;align-items:center}.btn{border:1px solid transparent;background:var(--green);color:white;padding:12px 18px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:12px}.btn.light{background:var(--white);border-color:var(--line);color:var(--ink)}.btn.orange{background:var(--orange);color:#172a20}.btn.danger{background:var(--red);color:white}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:22px;height:3px;background:var(--orange)}.hero{padding:52px 0 40px;display:grid;grid-template-columns:1.45fr .8fr;gap:65px;align-items:center}h1{font-size:clamp(38px,5vw,65px);line-height:1.1;letter-spacing:-2.7px;margin:19px 0}h1 span{color:var(--green)}.hero p{max-width:570px;color:var(--muted);font-size:17px;line-height:1.7}.hero-visual{background:var(--green);height:240px;position:relative;overflow:hidden;border-radius:100px 2px 2px 2px}.hero-visual:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 39px,#ffffff0d 40px 41px)}.hero-visual svg{position:absolute;width:100%;height:100%}.hero-visual img{width:100%;height:100%;object-fit:cover;position:absolute}.visual-label{position:absolute;bottom:15px;left:20px;right:20px;color:white;font-size:12px;background:#103b2ed9;padding:10px 14px}.stats{display:flex;gap:35px;border-top:1px solid var(--line);padding:20px 0 28px}.stat strong{font:800 25px Manrope;display:block}.stat span{font-size:12px;color:var(--muted)}.library{background:var(--white);border-top:1px solid var(--line);padding:38px 0 65px}.library-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:24px}h2{font-size:27px;letter-spacing:-1px;margin:0}.badge{font-size:12px;background:var(--bg);padding:7px 12px;color:var(--muted)}.layout{display:grid;grid-template-columns:240px 1fr;gap:36px}.filters{border-right:1px solid var(--line);padding-right:25px}.filters h3{font-size:13px;letter-spacing:1px;text-transform:uppercase;margin:0 0 18px}label{display:block;font-size:13px;font-weight:600;margin:17px 0 7px}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:3px;background:var(--white);padding:11px;color:var(--ink)}input[type=color]{height:43px;padding:4px}input[type=file]{font-size:13px}textarea{resize:vertical}.search{position:relative}.search input{padding:14px 16px;background:var(--bg);font-size:15px}.resultbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:17px 0;font-size:13px;color:var(--muted)}.resultbar select{width:auto;padding:7px;font-size:12px}.subjects{display:grid;gap:12px}.subject{border:1px solid var(--line);padding:20px;display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center;transition:border-color .2s,transform .2s}.subject:hover{border-color:var(--green);transform:translateY(-2px)}.file-icon{background:var(--bg);width:44px;height:53px;display:grid;place-items:center;font-size:10px;font-weight:800;border-bottom:3px solid var(--orange)}.subject h3{font-size:16px;margin:6px 0;letter-spacing:-.3px}.tags{display:flex;flex-wrap:wrap;gap:7px;font-size:10px;font-weight:700}.tag{color:var(--green);background:#11643e10;padding:3px 7px}.metadata{font-size:12px;color:var(--muted);margin:5px 0 0}.subject-actions{display:flex;gap:7px}.empty{min-height:275px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;border-top:1px solid var(--line);padding:25px}.empty-symbol{font:800 50px Manrope;color:var(--orange)}.empty h3{font-size:20px;margin:12px 0 6px}.empty p{color:var(--muted);max-width:420px;line-height:1.7;margin:0 0 17px}.notice{font-size:12px;line-height:1.6;background:#fff3db;border-left:3px solid var(--orange);padding:13px 17px;margin:20px 0}.admin{padding:35px 0 60px}.admin-head{display:flex;align-items:center;justify-content:space-between;gap:15px}.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:24px 0}.tab{border:0;background:none;color:var(--muted);padding:12px 20px;font-weight:700;border-bottom:3px solid transparent}.tab[aria-selected=true]{border-color:var(--green);color:var(--green)}.admin-grid{display:grid;grid-template-columns:1fr .7fr;gap:50px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.full{grid-column:1/-1}.help{font-size:12px;color:var(--muted);line-height:1.6}.form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.guide{border-top:3px solid var(--orange);padding-top:22px}.guide h3{margin-top:0}.guide p,.guide li{font-size:14px;line-height:1.8;color:var(--muted)}.guide ol{padding-left:20px}.colors{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.manage-item{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-bottom:1px solid var(--line)}.manage-item strong{display:block;font-size:15px}.manage-item small{color:var(--muted)}footer{border-top:1px solid var(--line);padding:28px 0}.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:12px;color:var(--muted)}.secondary{width:65px;height:65px;object-fit:contain}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);padding:14px 22px;background:var(--ink);color:white;z-index:50;width:max-content;max-width:90%;box-shadow:0 5px 30px #0002;font-size:14px}.reveal{animation:rise .7s both}.delay{animation-delay:.15s}@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@media(max-width:850px){.hero{gap:25px;grid-template-columns:1.3fr .8fr}.layout{grid-template-columns:200px 1fr;gap:22px}.subject{grid-template-columns:40px 1fr}.subject-actions{grid-column:2}.admin-grid{gap:30px;grid-template-columns:1fr}.guide{display:none}}@media(max-width:620px){.wrap{width:calc(100% - 30px)}.top span:last-child{display:none}.brand{font-size:16px;gap:9px}.logo{width:55px;height:55px}.fallback{width:45px;height:48px;font-size:18px}.brand small{font-size:8px;letter-spacing:1.5px}.header-actions .public-link{display:none}.btn{padding:10px 13px;font-size:12px}.hero{grid-template-columns:1fr;padding:35px 0 25px;gap:20px}h1{font-size:43px;letter-spacing:-2px}.hero-visual{height:180px;border-radius:65px 2px 2px 2px}.stats{gap:28px}.stat strong{font-size:22px}.library-head{align-items:start;flex-direction:column}.layout{grid-template-columns:1fr}.filters{border:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.filters h3,.filters .reset{grid-column:1/-1}.filters h3{margin-bottom:0}.filters label{margin-top:10px}.filters .reset{margin-top:15px}.subject{padding:15px;gap:12px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.colors{grid-template-columns:1fr 1fr}.manage-item{align-items:start;flex-direction:column}.foot{align-items:start;flex-wrap:wrap}.admin-head{align-items:start}h2{font-size:23px}.resultbar{align-items:start}.tab{padding:10px 13px;font-size:13px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>ISTEC NDOGBONG · ESPACE ACADÉMIQUE</span><span>SUJETS & RESSOURCES PÉDAGOGIQUES</span></div></div>
+<header>
+<div class="wrap head">
+<a href="#" class="brand" aria-label="Accueil ISTEC NDOGBONG">
+<span class="fallback" id="logoFallback" aria-hidden="true">I.</span>
+<img id="mainLogo" class="logo" alt="Logo principal du campus" hidden>
+<span id="brandName">ISTEC NDOGBONG<small>BIBLIOTHÈQUE DE SUJETS</small></span>
+</a>
+<div class="header-actions"><a href="#bibliotheque" class="public-link">Consulter les sujets</a><button class="btn" id="adminToggle" aria-expanded="false" aria-controls="adminPanel">⚙ Administration</button></div>
+</div>
+</header>
+<main>
+<div id="publicPage">
+<div class="wrap">
+<section class="hero">
+<div class="reveal"><div class="eyebrow">La connaissance en accès direct</div><h1 id="heroTitle">Vos sujets.<br><span>Votre réussite.</span></h1><p id="heroDescription">Retrouvez les sujets du niveau 1 au Master 2, dans toutes les spécialités du campus. Recherchez, consultez et téléchargez les documents disponibles.</p><a class="btn" href="#bibliotheque">Explorer la bibliothèque <span aria-hidden="true">↓</span></a></div>
+<div class="hero-visual reveal delay">
+<svg viewBox="0 0 360 240" fill="none" aria-hidden="true"><circle cx="190" cy="120" r="90" stroke="#ffffff30"/><rect x="112" y="48" width="135" height="156" rx="4" fill="#ed9e18" transform="rotate(12 112 48)"/><rect x="103" y="39" width="135" height="156" rx="4" fill="#F5F6F0" transform="rotate(-8 103 39)"/><path d="M129 80L212 68M133 103L216 91M136 127L190 119" stroke="#11643e" stroke-width="5"/><circle cx="265" cy="62" r="18" fill="#b32043"/><path d="M256 62H274M265 53V71" stroke="white" stroke-width="2"/></svg>
+<img id="campusPhoto" alt="Vie étudiante au campus" hidden>
+<div class="visual-label">ÉCONOMIE & GESTION · PARAMÉDICAL · TECHNIQUES</div>
+</div>
+</section>
+<div class="stats"><div class="stat"><strong id="subjectCount">0</strong><span>Sujets disponibles</span></div><div class="stat"><strong id="specialtyCount">0</strong><span>Spécialités représentées</span></div><div class="stat"><strong>8</strong><span>Niveaux de classement</span></div></div>
+</div>
+<section class="library" id="bibliotheque" aria-labelledby="libraryTitle">
+<div class="wrap">
+<div class="library-head"><div><div class="eyebrow" style="margin-bottom:10px">La bibliothèque numérique</div><h2 id="libraryTitle">Trouvez le bon sujet.</h2></div><span class="badge">PDF · Images · Documents</span></div>
+<div class="layout">
+<aside class="filters" aria-label="Filtres de recherche">
+<h3>Affiner la recherche</h3>
+<div><label for="filterLevel">Niveau</label><select id="filterLevel"><option value="">Tous les niveaux</option></select></div>
+<div><label for="filterSpecialty">Spécialité</label><select id="filterSpecialty"><option value="">Toutes les spécialités</option></select></div>
+<div><label for="filterType">Type de document</label><select id="filterType"><option value="">Tous les types</option><option>Sujet d’examen</option><option>Contrôle continu</option><option>Travaux dirigés</option><option>Corrigé</option><option>Autre ressource</option></select></div>
+<div><label for="filterYear">Année académique</label><select id="filterYear"><option value="">Toutes les années</option></select></div>
+<button class="btn light reset" id="resetFilters">Réinitialiser les filtres ↺</button>
+</aside>
+<div>
+<div class="search"><label class="help" for="search" style="margin:0 0 7px">Rechercher par titre, matière ou spécialité</label><input id="search" type="search" placeholder="Ex. : comptabilité, anatomie, mathématiques…"></div>
+<div class="resultbar"><span id="resultCount" aria-live="polite">Chargement…</span><select id="sort" aria-label="Trier les sujets"><option value="new">Plus récents</option><option value="title">Titre : A → Z</option></select></div>
+<div class="subjects" id="subjects"></div>
+<div class="empty" id="empty" hidden><div class="empty-symbol" aria-hidden="true">↥</div><h3 id="emptyTitle">La bibliothèque vous attend.</h3><p id="emptyText">Aucun sujet n’a encore été déposé. L’administrateur peut ajouter le premier document depuis son espace.</p><button class="btn light" id="firstSubject">Déposer le premier sujet</button></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="admin wrap" id="adminPanel" hidden aria-labelledby="adminTitle">
+<div class="admin-head"><div><div class="eyebrow" style="margin-bottom:10px">Votre espace de gestion</div><h2 id="adminTitle">Administration du campus</h2></div><button class="btn light" id="backPublic">Voir le site ↗</button></div>
+<div class="notice"><strong>Version autonome, enregistrée sur ce navigateur.</strong> Vous pouvez gérer les documents, logos, textes et couleurs sans modifier le code. Il n’y a pas encore de compte administrateur sécurisé ni de partage entre appareils. Pour un site public multiutilisateur, un serveur, une base de données et une authentification sont nécessaires. Exportez régulièrement votre sauvegarde.</div>
+<div class="tabs" role="tablist" aria-label="Sections administrateur">
+<button class="tab" role="tab" id="tabUpload" aria-selected="true" aria-controls="uploadPanel" data-panel="uploadPanel">+ Déposer un sujet</button>
+<button class="tab" role="tab" id="tabManage" aria-selected="false" aria-controls="managePanel" data-panel="managePanel">Gérer les sujets</button>
+<button class="tab" role="tab" id="tabSettings" aria-selected="false" aria-controls="settingsPanel" data-panel="settingsPanel">Identité du site</button>
+<button class="tab" role="tab" id="tabBackup" aria-selected="false" aria-controls="backupPanel" data-panel="backupPanel">Sauvegarde</button>
+</div>
+<div id="uploadPanel" role="tabpanel" aria-labelledby="tabUpload">
+<div class="admin-grid">
+<form id="subjectForm">
+<input type="hidden" id="editId">
+<h3 id="formTitle">Ajouter un document à la bibliothèque</h3>
+<div class="form-grid">
+<div class="full"><label for="title">Titre du sujet *</label><input id="title" required maxlength="180" placeholder="Ex. : Épreuve de comptabilité générale"></div>
+<div><label for="level">Niveau *</label><select id="level" required></select></div>
+<div><label for="specialty">Spécialité *</label><input id="specialty" required maxlength="120" list="specialties" placeholder="Saisissez la spécialité"><datalist id="specialties"></datalist></div>
+<div><label for="matter">Matière *</label><input id="matter" required maxlength="120" placeholder="Ex. : Comptabilité générale"></div>
+<div><label for="year">Année académique *</label><input id="year" required pattern="[0-9]{4}-[0-9]{4}" placeholder="2025-2026" title="Format : 2025-2026"></div>
+<div><label for="type">Type *</label><select id="type"><option>Sujet d’examen</option><option>Contrôle continu</option><option>Travaux dirigés</option><option>Corrigé</option><option>Autre ressource</option></select></div>
+<div><label for="session">Session / semestre</label><input id="session" maxlength="80" placeholder="Ex. : Semestre 1"></div>
+<div class="full"><label for="documentFile">Document *</label><input id="documentFile" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.png,.jpg,.jpeg,.webp" required><p class="help" id="fileHelp">PDF recommandé. Taille maximale : 20 Mo. Ne déposez que les documents dont vous avez l’autorisation de diffusion.</p></div>
+</div>
+<div class="form-actions"><button class="btn" id="saveSubject" type="submit">Publier le sujet ↥</button><button class="btn light" type="button" id="cancelEdit" hidden>Annuler la modification</button></div>
+</form>
+<aside class="guide"><h3>Un classement simple, pour tous.</h3><ol><li>Saisissez un titre précis et la matière.</li><li>Choisissez le niveau et indiquez la spécialité. Toutes les spécialités peuvent être ajoutées librement.</li><li>Joignez le sujet, puis cliquez sur « Publier ».</li></ol><p>Votre document apparaîtra immédiatement dans la bibliothèque de ce navigateur. Vous pourrez ensuite le modifier, le télécharger ou le supprimer.</p><div class="notice">Le logo original n’est pas intégré automatiquement aux pièces jointes de cette conversation. Importez-le dans l’onglet « Identité du site » pour le rendre visible.</div></aside>
+</div>
+</div>
+<div id="managePanel" role="tabpanel" aria-labelledby="tabManage" hidden><h3>Documents publiés</h3><p class="help">Modifiez les informations ou supprimez un sujet. La suppression est définitive après confirmation.</p><div id="manageList"></div></div>
+<div id="settingsPanel" role="tabpanel" aria-labelledby="tabSettings" hidden>
+<form id="settingsForm">
+<div class="admin-grid"><div>
+<h3>Nom, textes et visuels</h3>
+<label for="siteName">Nom du campus</label><input id="siteName" required maxlength="100">
+<label for="welcomeTitle">Titre d’accueil</label><input id="welcomeTitle" required maxlength="120">
+<label for="welcomeText">Texte de présentation</label><textarea id="welcomeText" rows="4" required maxlength="800"></textarea>
+<label for="logoFile">Premier logo · logo principal</label><input id="logoFile" type="file" accept="image/png,image/jpeg,image/webp"><p class="help">Importez le premier logo fourni. Il sera affiché dans l’en-tête. PNG, JPEG ou WebP, 3 Mo maximum.</p>
+<label for="secondaryFile">Logo complémentaire du campus</label><input id="secondaryFile" type="file" accept="image/png,image/jpeg,image/webp">
+<label for="photoFile">Photographie des étudiants</label><input id="photoFile" type="file" accept="image/png,image/jpeg,image/webp">
+</div><div>
+<h3>Couleurs du campus</h3><p class="help">Cliquez sur une couleur pour la modifier. Conservez un contraste suffisant entre les boutons, les fonds et les textes.</p>
+<div class="colors">
+<div><label for="greenColor">Vert</label><input id="greenColor" type="color"></div>
+<div><label for="orangeColor">Orange</label><input id="orangeColor" type="color"></div>
+<div><label for="redColor">Rouge</label><input id="redColor" type="color"></div>
+<div><label for="whiteColor">Blanc / fonds</label><input id="whiteColor" type="color"></div>
+</div>
+<div class="notice">Les images importées sont conservées dans le stockage local du navigateur, avec les sujets. Utilisez « Sauvegarde » pour pouvoir les restaurer ailleurs.</div>
+<label><input id="removePhoto" type="checkbox" style="width:auto"> Retirer la photographie actuelle</label>
+<label><input id="removeSecondary" type="checkbox" style="width:auto"> Retirer le logo complémentaire actuel</label>
+</div></div>
+<div class="form-actions"><button type="submit" class="btn">Enregistrer les modifications ✓</button></div>
+</form>
+</div>
+<div id="backupPanel" role="tabpanel" aria-labelledby="tabBackup" hidden>
+<h3>Conservez une copie de votre travail.</h3>
+<p class="help">La sauvegarde JSON contient les paramètres, les logos et tous les documents. Gardez-la dans un endroit sûr : les fichiers peuvent contenir des données personnelles.</p>
+<button class="btn" id="exportBackup">Exporter la sauvegarde ↓</button>
+<div style="max-width:550px;margin-top:25px"><label for="importBackup">Restaurer une sauvegarde de ce site</label><input id="importBackup" type="file" accept=".json,application/json"><p class="help">La restauration remplace les données actuelles, après votre confirmation. Exportez-les d’abord si vous souhaitez les conserver.</p></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap foot"><div><strong id="footerName">ISTEC NDOGBONG</strong><br>Institut Supérieur des Techniques Économiques et Comptables</div><span>Bibliothèque de sujets · Niveau 1 au Master 2</span><img id="secondaryLogo" class="secondary" alt="Logo complémentaire du campus" hidden><span>© <span id="currentYear"></span></span></div></footer>
+<div class="toast" id="toast" role="status" hidden></div>
+<script>
+/*
+  VERSION AUTONOME :
+  - IndexedDB conserve les sujets et les visuels sur cet appareil.
+  - Aucun mot de passe simulé : cet espace n'est pas une authentification.
+  - Pour une publication partagée, remplacer la persistance locale par
+    une API sécurisée avec contrôle des droits côté serveur.
+*/
+const $=id=>document.getElementById(id);
+const levels=["Niveau 1","Niveau 2","Niveau 3","BTS","HND","Licence","Master 1","Master 2"];
+const defaults={name:"ISTEC NDOGBONG",title:"Vos sujets. Votre réussite.",description:"Retrouvez les sujets du niveau 1 au Master 2, dans toutes les spécialités du campus. Recherchez, consultez et téléchargez les documents disponibles.",green:"#11643e",orange:"#ed9e18",red:"#b32043",white:"#ffffff",logo:"",secondary:"",photo:""};
+let state={settings:{...defaults},subjects:[]},db,toastTimer;
+function notify(message){$("toast").textContent=message;$("toast").hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").hidden=true,5000)}
+function openDB(){return new Promise((resolve,reject)=>{const request=indexedDB.open("istec-sujets-v1",1);request.onupgradeneeded=()=>request.result.createObjectStore("data");request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)})}
+function load(){return new Promise((resolve,reject)=>{const r=db.transaction("data").objectStore("data").get("state");r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function persist(next){return new Promise((resolve,reject)=>{const tx=db.transaction("data","readwrite");tx.objectStore("data").put(next,"state");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
+async function commit(next){if(!db)throw Error("Stockage indisponible. Ouvrez le site dans un navigateur autorisant IndexedDB.");await persist(next);state=next;render()}
+function element(tag,text,className){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e}
+function optionList(id,values,first){const current=$(id).value;$(id).replaceChildren();if(first!==undefined)$(id).append(new Option(first,""));values.forEach(v=>$(id).append(new Option(v,v)));if(values.includes(current))$(id).value=current}
+function setImage(id,src){$(id).hidden=!src;if(src)$(id).src=src;else $(id).removeAttribute("src")}
+function applySettings(){const s=state.settings;["green","orange","red","white"].forEach(k=>document.documentElement.style.setProperty("--"+k,s[k]));$("brandName").replaceChildren(document.createTextNode(s.name),element("small","BIBLIOTHÈQUE DE SUJETS"));$("footerName").textContent=s.name;$("heroTitle").textContent=s.title;$("heroDescription").textContent=s.description;document.title=s.name+" — Bibliothèque de sujets";setImage("mainLogo",s.logo);$("logoFallback").hidden=!!s.logo;setImage("secondaryLogo",s.secondary);setImage("campusPhoto",s.photo)}
+function normalized(s){return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
+function download(data,name){const a=document.createElement("a");a.href=data;a.download=name;document.body.append(a);a.click();a.remove()}
+function button(text,fn,style="light"){const b=element("button",text,"btn "+style);b.type="button";b.addEventListener("click",fn);return b}
+function fileSize(n){return n>=1048576?(n/1048576).toFixed(1)+" Mo":Math.max(1,Math.round(n/1024))+" Ko"}
+function render(){
+applySettings();
+const specialties=[...new Set(state.subjects.map(s=>s.specialty))].sort((a,b)=>a.localeCompare(b,"fr"));
+optionList("filterSpecialty",specialties,"Toutes les spécialités");
+optionList("filterYear",[...new Set(state.subjects.map(s=>s.year))].sort().reverse(),"Toutes les années");
+$("specialties").replaceChildren(...specialties.map(v=>new Option(v,v)));
+$("subjectCount").textContent=state.subjects.length;$("specialtyCount").textContent=specialties.length;
+renderSubjects();renderManage();
+}
+function renderSubjects(){
+const q=normalized($("search").value.trim());
+let list=state.subjects.filter(s=>(!$("filterLevel").value||s.level===$("filterLevel").value)&&(!$("filterSpecialty").value||s.specialty===$("filterSpecialty").value)&&(!$("filterType").value||s.type===$("filterType").value)&&(!$("filterYear").value||s.year===$("filterYear").value)&&normalized([s.title,s.specialty,s.matter,s.session].join(" ")).includes(q));
+list.sort($("sort").value==="title"?(a,b)=>a.title.localeCompare(b.title,"fr"):(a,b)=>b.created-a.created);
+$("resultCount").textContent=list.length+" sujet"+(list.length>1?"s":"")+" trouvé"+(list.length>1?"s":"");
+$("subjects").replaceChildren();
+list.forEach(s=>{
+const article=element("article",undefined,"subject");
+const ext=s.filename.split(".").pop().toUpperCase();
+article.append(element("div",ext,"file-icon"));
+const content=element("div");const tags=element("div",undefined,"tags");[s.level,s.specialty].forEach(t=>tags.append(element("span",t,"tag")));
+content.append(tags,element("h3",s.title),element("p",s.matter+" · "+s.year+(s.session?" · "+s.session:""),"metadata"),element("p",s.type+" · "+fileSize(s.size),"metadata"));
+const actions=element("div",undefined,"subject-actions");actions.append(button("Télécharger ↓",()=>download(s.data,s.filename),""));
+article.append(content,actions);$("subjects").append(article);
+});
+$("empty").hidden=list.length>0;$("firstSubject").hidden=state.subjects.length>0;
+$("emptyTitle").textContent=state.subjects.length?"Aucun sujet ne correspond.":"La bibliothèque vous attend.";
+$("emptyText").textContent=state.subjects.length?"Essayez une autre recherche ou réinitialisez les filtres.":"Aucun sujet n’a encore été déposé. Ajoutez votre premier document depuis l’espace administrateur.";
+}
+function renderManage(){
+$("manageList").replaceChildren();
+if(!state.subjects.length){$("manageList").append(element("p","Aucun document publié pour le moment.","help"));return}
+[...state.subjects].sort((a,b)=>b.created-a.created).forEach(s=>{
+const row=element("div",undefined,"manage-item"),info=element("div");
+info.append(element("strong",s.title),element("small",s.level+" · "+s.specialty+" · "+s.year));
+const actions=element("div",undefined,"subject-actions");
+actions.append(button("Modifier",()=>editSubject(s.id)),button("Supprimer",async()=>{if(!confirm("Supprimer définitivement « "+s.title+" » ?"))return;try{await commit({...state,subjects:state.subjects.filter(v=>v.id!==s.id)});notify("Sujet supprimé.")}catch(e){notify(e.message)}},"danger"));
+row.append(info,actions);$("manageList").append(row);
+});
+}
+function showAdmin(show=true){$("adminPanel").hidden=!show;$("publicPage").hidden=show;$("adminToggle").setAttribute("aria-expanded",String(show));if(show)fillSettings();window.scrollTo({top:0,behavior:"smooth"})}
+function switchTab(id){document.querySelectorAll(".tab").forEach(t=>{const active=t.dataset.panel===id;t.setAttribute("aria-selected",String(active));$(t.dataset.panel).hidden=!active})}
+function clearForm(){$("subjectForm").reset();$("editId").value="";$("documentFile").required=true;$("formTitle").textContent="Ajouter un document à la bibliothèque";$("saveSubject").textContent="Publier le sujet ↥";$("cancelEdit").hidden=true;$("fileHelp").textContent="PDF recommandé. Taille maximale : 20 Mo. Ne déposez que les documents dont vous avez l’autorisation de diffusion."}
+function editSubject(id){const s=state.subjects.find(s=>s.id===id);if(!s)return;clearForm();$("editId").value=s.id;["title","level","specialty","matter","year","type","session"].forEach(k=>$(k).value=s[k]||"");$("documentFile").required=false;$("fileHelp").textContent="Document actuel : "+s.filename+". Laissez ce champ vide pour le conserver.";$("formTitle").textContent="Modifier le sujet";$("saveSubject").textContent="Enregistrer les modifications";$("cancelEdit").hidden=false;switchTab("uploadPanel");$("title").focus()}
+function readFile(file,max,image=false){return new Promise((resolve,reject)=>{
+if(file.size>max)return reject(Error("Fichier trop volumineux : "+file.name));
+if(image&&!["image/png","image/jpeg","image/webp"].includes(file.type))return reject(Error("Choisissez une image PNG, JPEG ou WebP."));
+const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(Error("Impossible de lire "+file.name));r.readAsDataURL(file)
+})}
+$("subjectForm").addEventListener("submit",async e=>{
+e.preventDefault();$("saveSubject").disabled=true;
+try{
+const id=$("editId").value,old=state.subjects.find(s=>s.id===id),file=$("documentFile").files[0];
+if(!file&&!old)throw Error("Joignez un document.");
+if(file&&!/\.(pdf|docx?|xlsx?|pptx?|png|jpe?g|webp)$/i.test(file.name))throw Error("Format de document non autorisé.");
+const s={id:old?old.id:crypto.randomUUID(),created:old?old.created:Date.now()};
+["title","level","specialty","matter","year","type","session"].forEach(k=>s[k]=$(k).value.trim());
+if(!s.title||!s.specialty||!s.matter)throw Error("Complétez les champs obligatoires.");
+if(file){s.data=await readFile(file,20*1024*1024);s.filename=file.name;s.size=file.size}else{s.data=old.data;s.filename=old.filename;s.size=old.size}
+await commit({...state,subjects:old?state.subjects.map(v=>v.id===id?s:v):[...state.subjects,s]});clearForm();notify(old?"Sujet modifié.":"Sujet publié dans la bibliothèque locale.");switchTab("managePanel")
+}catch(err){notify("Enregistrement impossible : "+err.message)}
+finally{$("saveSubject").disabled=false}
+});
+function fillSettings(){const s=state.settings;$("siteName").value=s.name;$("welcomeTitle").value=s.title;$("welcomeText").value=s.description;["green","orange","red","white"].forEach(k=>$(k+"Color").value=s[k])}
+$("settingsForm").addEventListener("submit",async e=>{
+e.preventDefault();const b=e.submitter;b.disabled=true;
+try{const s={...state.settings,name:$("siteName").value.trim(),title:$("welcomeTitle").value.trim(),description:$("welcomeText").value.trim()};
+if(!s.name||!s.title||!s.description)throw Error("Complétez les textes obligatoires.");
+["green","orange","red","white"].forEach(k=>s[k]=$(k+"Color").value);
+for(const [input,key] of [["logoFile","logo"],["secondaryFile","secondary"],["photoFile","photo"]]){const f=$(input).files[0];if(f)s[key]=await readFile(f,3*1024*1024,true)}
+if($("removePhoto").checked)s.photo="";if($("removeSecondary").checked)s.secondary="";
+await commit({...state,settings:s});["logoFile","secondaryFile","photoFile"].forEach(k=>$(k).value="");$("removePhoto").checked=false;$("removeSecondary").checked=false;notify("Identité du site enregistrée. Cliquez sur « Voir le site » pour vérifier.")
+}catch(err){notify(err.message)}finally{b.disabled=false}
+});
+$("exportBackup").addEventListener("click",()=>{
+const blob=new Blob([JSON.stringify({format:"istec-library-v1",state})],{type:"application/json"});
+const url=URL.createObjectURL(blob);download(url,"istec-sauvegarde-"+new Date().toISOString().slice(0,10)+".json");setTimeout(()=>URL.revokeObjectURL(url),1000)
+});
+function validateBackup(v){
+if(v.format!=="istec-library-v1"||!v.state||!Array.isArray(v.state.subjects)||!v.state.settings)throw Error("Sauvegarde incompatible.");
+const s=v.state.settings;
+for(const k of ["name","title","description"])if(typeof s[k]!=="string"||!s[k].trim()||s[k].length>1000)throw Error("Paramètres invalides.");
+for(const k of ["green","orange","red","white"])if(!/^#[0-9a-f]{6}$/i.test(s[k]))throw Error("Couleur invalide.");
+for(const k of ["logo","secondary","photo"])if(s[k]&& !/^data:image\/(png|jpeg|webp);base64,/.test(s[k]))throw Error("Image invalide.");
+const ids=new Set();
+for(const d of v.state.subjects){
+for(const k of ["id","title","level","specialty","matter","year","type","filename","data"])if(typeof d[k]!=="string")throw Error("Document invalide.");
+if(ids.has(d.id)||!levels.includes(d.level)||!Number.isFinite(d.created)||!Number.isFinite(d.size)||d.size<0||d.size>20*1024*1024||!/^data:[^,]*;base64,[A-Za-z0-9+/=\r\n]+$/.test(d.data)||!/\.(pdf|docx?|xlsx?|pptx?|png|jpe?g|webp)$/i.test(d.filename))throw Error("Document invalide.");
+ids.add(d.id);
+}return v.state;
+}
+$("importBackup").addEventListener("change",async e=>{
+const file=e.target.files[0];if(!file)return;
+try{if(file.size>150*1024*1024)throw Error("Sauvegarde trop volumineuse (150 Mo maximum).");const next=validateBackup(JSON.parse(await file.text()));if(!confirm("Remplacer tous les sujets et paramètres actuels par cette sauvegarde ?"))return;await commit(next);clearForm();fillSettings();notify("Sauvegarde restaurée.")}catch(err){notify("Restauration impossible : "+err.message)}finally{e.target.value=""}
+});
+$("adminToggle").addEventListener("click",()=>showAdmin($("adminPanel").hidden));
+$("backPublic").addEventListener("click",()=>showAdmin(false));
+$("firstSubject").addEventListener("click",()=>{showAdmin();switchTab("uploadPanel")});
+$("cancelEdit").addEventListener("click",clearForm);
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>switchTab(t.dataset.panel)));
+document.querySelector(".tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;e.preventDefault();const tabs=[...document.querySelectorAll(".tab")];let i=tabs.indexOf(document.activeElement);i=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[i].focus();switchTab(tabs[i].dataset.panel)});
+["filterLevel","filterSpecialty","filterType","filterYear","sort"].forEach(id=>$(id).addEventListener("change",renderSubjects));
+$("search").addEventListener("input",renderSubjects);
+$("resetFilters").addEventListener("click",()=>{["filterLevel","filterSpecialty","filterType","filterYear","search"].forEach(k=>$(k).value="");renderSubjects()});
+$("currentYear").textContent=new Date().getFullYear();
+optionList("level",levels);optionList("filterLevel",levels,"Tous les niveaux");
+(async()=>{try{db=await openDB();const saved=await load();if(saved)state=saved;render();fillSettings()}catch(e){render();fillSettings();notify("Stockage local indisponible : les modifications ne pourront pas être enregistrées.")}})();
+</script>
+</body>
+</html>
